@@ -1,0 +1,1130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>For My Special jii ❤️</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <style>
+   *{
+
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+     font-family:'Poppins',sans-serif;
+     }
+     html,body{
+      width:100%;
+      height:100%;
+      overflow:hidden;
+      }
+
+      #page1{
+         overflow:hidden !important;
+         }
+
+
+         body{
+           display:flex;
+           justify-content:center;
+           align-items:center;
+           background:linear-gradient(135deg,#ffd6ea,#ffc2e2,#ffeef8);
+           position:relative;
+           }
+
+      #heartContainer{
+       position:fixed;
+       left:0;
+       top:0;
+       width:100%;
+       height:100%;
+       overflow:hidden;
+       pointer-events:none;
+       z-index:1;
+       }
+
+ .heart{
+position:absolute;
+bottom:-50px;
+font-size:24px;
+animation:floatHeart linear forwards;
+}
+
+@keyframes floatHeart{
+
+0%{
+transform:translateY(0) scale(.5);
+opacity:0;
+}
+
+20%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-120vh) rotate(360deg) scale(1.3);
+opacity:0;
+}
+
+}
+
+.page{
+position:absolute;
+width:100%;
+height:100%;
+display:none;
+justify-content:center;
+align-items:center;
+padding:20px;
+z-index:5;
+}
+
+.page.active{
+display:flex;
+}
+
+.card{
+width:90%;
+max-width:700px;
+padding:35px;
+border-radius:30px;
+background:rgba(255,255,255,.22);
+backdrop-filter:blur(20px);
+border:2px solid rgba(255,255,255,.35);
+box-shadow:0 20px 50px rgba(255,20,147,.25);
+text-align:center;
+animation:popup .8s;
+
+max-height:90vh;
+overflow-y:auto;
+
+}
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:scale(.8);
+}
+
+to{
+opacity:1;
+transform:scale(1);
+}
+
+}
+
+.title{
+font-size:42px;
+color:#ff1975;
+margin-bottom:15px;
+}
+
+.text{
+font-size:20px;
+line-height:1.8;
+color:#8a0055;
+margin-top:10px;
+}
+
+.buttons{
+margin-top:35px;
+height:70px;
+}
+
+button{
+padding:15px 35px;
+border:none;
+border-radius:50px;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+#yesBtn{
+background:#ff1975;
+color:#fff;
+box-shadow:0 10px 25px rgba(255,20,147,.3);
+}
+
+#yesBtn:hover{
+transform:scale(1.08);
+}
+
+.buttons{
+margin-top:35px;
+height:70px;
+position:relative;
+}
+
+#yesBtn{
+background:#ff1975;
+color:#fff;
+box-shadow:0 10px 25px rgba(255,20,147,.3);
+}
+
+#noBtn{
+position:relative;
+margin-left:20px;
+
+width:140px;
+height:55px;
+
+background:#fff;
+color:#ff1975;
+
+font-size:18px;
+font-weight:600;
+
+border:none;
+border-radius:50px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.12);
+
+z-index:99999;
+}
+
+input{
+width:100%;
+padding:15px;
+margin-top:20px;
+border:none;
+outline:none;
+border-radius:15px;
+background:#fff0f7;
+font-size:18px;
+text-align:center;
+}
+
+.nextBtn{
+width:100%;
+margin-top:25px;
+background:#ff1975;
+color:white;
+}
+
+/* ========================= */
+/* ENVELOPE DESIGN */
+/* ========================= */
+
+.envelopeBox{
+display:flex;
+justify-content:center;
+align-items:center;
+width:100%;
+height:100%;
+}
+
+#envelope{
+position:relative;
+width:320px;
+height:220px;
+cursor:pointer;
+perspective:1000px;
+}
+
+.front{
+position:absolute;
+bottom:1;
+width:100%;
+height:200px;
+background:#ff5c9a;
+border-radius:0 0 12px 12px;
+z-index:2;
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+}
+
+.flap{
+position:absolute;
+top:0;
+left:0;
+width:0;
+height:0;
+border-left:160px solid transparent;
+border-right:160px solid transparent;
+border-top:110px solid #ff2d7a;
+transform-origin:top;
+transition:1s;
+z-index:4;
+}
+
+.letter{
+position:absolute;
+left:10%;
+bottom:35px;
+width:80%;
+height:165px;
+background:white;
+border-radius:10px;
+padding:20px;
+box-shadow:0 8px 20px rgba(0,0,0,.25);
+z-index:1;
+transition:1s;
+overflow:hidden;
+}
+
+.letterContent{
+color:#8a0055;
+font-size:17px;
+line-height:1.7;
+text-align:left;
+}
+
+.letterContent h2{
+text-align:center;
+margin-bottom:15px;
+color:#ff1975;
+}
+
+/* ========================= */
+/* ENVELOPE OPEN ANIMATION */
+/* ========================= */
+
+#envelope.open .flap{
+transform:rotateX(180deg);
+z-index:0;
+}
+
+#envelope.open .letter{
+bottom:85px;
+transform:scale(1);
+transition:1s;
+}
+
+@media (max-width:768px){
+
+.card{
+max-width:430px;
+width:95%;
+}
+
+}
+
+.lastCard{
+max-width:1550px;
+width:90%;
+}
+
+#page1 .card{
+    overflow: visible !important;
+}
+
+.sorryText{
+  font-size:16px;
+  line-height:1.8;
+  text-align:left;
+}
+
+.gif{
+position:absolute;
+width:300px;
+height:300px;
+object-fit:contain;
+z-index:3;
+pointer-events:none;
+}
+
+@keyframes fadeToBlack{
+0%{opacity:1;}
+100%{opacity:0;}
+}
+
+.finalFade{
+animation:fadeToBlack 4s forwards;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div id="lockScreen" style="
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:#ffd6ea;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:99999;
+">
+
+<h2 style="color:#ff1975;">🔒 Enter Password ❤️</h2>
+
+<input
+type="password"
+id="passwordInput"
+placeholder="Enter Password"
+style="
+width:280px;
+padding:15px;
+margin-top:20px;
+border-radius:15px;
+border:none;
+text-align:center;
+">
+
+<button
+onclick="checkPassword()"
+style="
+margin-top:20px;
+padding:15px 35px;
+background:#ff1975;
+color:white;
+border:none;
+border-radius:50px;
+font-size:18px;
+cursor:pointer;
+">
+
+Unlock ❤️
+
+</button>
+
+</div>
+
+  <audio id="bgMusic" loop>
+    <source src="song.mp3" type="audio/mpeg">
+   </audio>
+
+<div id="heartContainer"></div>
+
+<!-- ========================= -->
+<!-- PAGE 0 : ENVELOPE -->
+<!-- ========================= -->
+
+<div class="page active" id="page0">
+
+<div class="envelopeBox">
+
+<div id="envelope">
+
+<img src="cat.gif" class="gif" style="left:-435px; top:-150px;">
+
+<div class="flap"></div>
+
+<div class="front">
+
+<div class="frontText"></div>
+
+</div>
+
+<div class="letter" id="letter">
+
+<div class="letterContent">
+
+<h2>💌 love you Jii ❤️</h2>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- PAGE 1 -->
+
+<div class="page" id="page1">
+
+<div class="card">
+
+<img src="1cat.gif" class="gif"
+style="right:20px;top:20px;width:140px;height:140px;">
+
+<div class="title">
+🥹❤️
+</div>
+
+<div class="text">
+
+Heyy ... ❤️
+
+<br><br>
+
+Hu tane ek cute saval puchu... jii
+
+<br><br>
+
+💖Shu tu mari sathe ek nani date par aavva mange che...💖
+
+<br><br>
+
+jaya apne bane ek bija ne time apisu...❤️
+
+</div>
+
+<div class="buttons">
+
+<button id="yesBtn">
+Yes ❤️
+</button>
+
+<button id="noBtn">
+No 🙈
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PAGE 2 : DATE -->
+<!-- ========================= -->
+
+<div class="page" id="page2">
+
+<div class="card">
+
+<img src="2cat.gif" class="gif"
+style="right:20px;top:20px;width:140px;height:140px;">
+
+<div class="title">
+  📅💕
+</div>
+
+<div class="text">
+
+   Awwww... 🥹❤️
+     <br><br>
+       Have ek nano saval...
+     <br><br>
+   💕 Apde kai Date par javu che.? 💕
+</div>
+
+<input
+type="date"
+id="dateInput">
+
+<input
+type="text"
+id="dateNote"
+placeholder="❤️ apne java ma date fix na hoy to bol..."
+style="background:white; color:#ff1975;">
+
+<button
+class="nextBtn"
+id="dateBtn">
+Continue ❤️
+</button>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PAGE 3 : TIME -->
+<!-- ========================= -->
+
+<div class="page" id="page3">
+
+<div class="card">
+
+  <img src="3cat.gif" class="gif"
+style="right:20px;top:20px;width:140px;height:140px;">
+
+<div class="title">
+⏰💕
+</div>
+
+<div class="text">
+
+ thank you jii  ... 🥰
+
+  <br><br>
+
+ Apne ketla vagye javu che ...? ❤️
+
+</div>
+
+<input
+type="time"
+id="timeInput">
+
+<button
+class="nextBtn"
+id="timeBtn">
+
+Continue 💖
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PAGE 4 : PLACE -->
+<!-- ========================= -->
+
+<div class="page" id="page4">
+
+<div class="card">
+
+  <img src="4cat.gif" class="gif"
+style="right:20px;top:20px;width:140px;height:140px;">
+
+<div class="title">
+📍💕
+</div>
+
+<div class="text">
+
+bas last last yarr ... 🥹❤️
+
+<br><br>
+
+💕 Apde kya kya javu che...? 💕
+
+</div>
+
+<input
+type="text"
+id="placeInput"
+placeholder="Enter Meeting Place ❤️">
+
+<button
+class="nextBtn"
+id="placeBtn">
+
+Continue ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PAGE 5 : THANK YOU -->
+<!-- ========================= -->
+
+<div class="page" id="page5">
+
+<div class="card">
+
+  <img src="5cat.gif" class="gif"
+style="right:20px;top:20px;width:175px;height:175px;">
+
+<div class="title">
+💖 love you 💖
+</div>
+
+<div class="text">
+
+💕 Love You So Much jii 🥹
+
+<br><br>
+
+📅 Date :
+<span id="finalDate"></span>
+
+<br><br>
+
+⏰ Time :
+<span id="finalTime"></span>
+
+<br><br>
+
+📍 Place :
+<span id="finalPlace"></span>
+
+<br><br>
+
+💖 Can't Wait To Meet You... jinny 🌹💕
+
+<br><br>
+
+<center>
+<button class="nextBtn" id="submitBtn" style="width:220px;">
+Submit ❤️
+</button>
+</center>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- ========================= -->
+<!-- PAGE 6 : SORRY LETTER -->
+<!-- ========================= -->
+
+<div class="page" id="page6">
+
+<div class="card lastCard">
+
+    <img src="6cat.gif" class="gif"
+style="right:20px;top:20px;width:140px;height:140px;">
+
+<div class="title">
+💌 Sorry Jii ❤️
+</div>
+
+<div class="text sorryText" id="sorryLetter">
+
+Dear Jii... 🥹❤️
+
+<br><br>
+Janki.... 😔 Te divse Tara par atlo gusso kariyo ae na karvo joito hato pan ae divse me tane sa mate na padi dithi ke nai javu... aenu mane dukha thayu ke mare avu na bolvu joitu hatu pan tya suthu ma var lagi gai hati and tane gusso avi gayo hato and te pan gussa ma na padi dithi ke have mare nathi javu 😭🥺 mane khabr che tane tyare mara sabdo and mara na manva na lidhe tane gusso aviyo hato pan yar tema Mari bhul hati ke varsad and time na lidhe Kai naki na kari sakay ke fix time par kayre jasu,  pan yar mane...., Hu atlo badho fumble hato ke bas javuj che and tu koi pan fix date api j de 😶🫥 aa Karan na lidhe me tane atlu badhu dukha and gusso apiyo aena mate sorry 😞 jii, and tyare mane hatu ke hu tane manavi lais pan atli badhi gusse thai gai hati ke tu ae vat karvaj mangti n hati, and tu java nu parmanent na padi det aetle mate tyre tara na padava chata pan hu ek ni ek vat tane keto hato pan jayre te kidhu ke have puchis to bilkul nai avu pachi me vicharyu ke hu tane te divse puchij ke je divse tu normal hoy and tane bilkul gusso na avto hoy pan tane kyare gusso ave aenu Kai nakij na hoy 😁🥲🫣 aetla mate pachi me aa plan vicharto ke avu kaik tane kari ne apu and tu mani jaa... 🤭🙇😫 Sorry jii ae divs mate yarr tu bovj khush hati pan me tane aa divas mate gusso and dukha apyu  aena mate 🙇
+<br><br>
+
+💖 I Am Really Sorry Jii 💖
+
+</div>
+
+<button
+class="nextBtn"
+id="finalSubmitBtn"
+style="display:none;">
+
+Final Submit ❤️
+
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+// ===============================
+// FLOATING HEARTS
+// ===============================
+
+const heartContainer=document.getElementById("heartContainer");
+
+function createHeart(){
+
+const heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML=Math.random()>0.5?"💖":"💕";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.fontSize=(18+Math.random()*18)+"px";
+
+heart.style.animationDuration=(4+Math.random()*4)+"s";
+
+heartContainer.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},8000);
+
+}
+
+setInterval(createHeart,300);
+
+// ===============================
+// PAGE SWITCH
+// ===============================
+
+function showPage(id){
+
+document.querySelectorAll(".page").forEach(page=>{
+
+page.classList.remove("active");
+
+});
+
+document.getElementById(id).classList.add("active");
+
+}
+
+// ===============================
+// ENVELOPE OPEN
+// ===============================
+
+const envelope = document.getElementById("envelope");
+const bgMusic = document.getElementById("bgMusic");
+
+if (envelope) {
+
+    envelope.onclick = function () {
+
+        envelope.classList.add("open");
+
+        if (bgMusic) {
+            bgMusic.play().catch(function(){});
+        }
+
+    };
+
+}
+
+// ===============================
+// LETTER CLICK
+// ===============================
+
+const letter=document.getElementById("letter");
+
+if(letter){
+
+letter.onclick=function(e){
+
+e.stopPropagation();
+
+setTimeout(function(){
+
+showPage("page1");
+
+},500);
+
+};
+
+}
+
+// ===============================
+// PAGE 5 SUBMIT
+// ===============================
+
+document.getElementById("submitBtn").onclick=function(){
+
+showPage("page6");
+
+setTimeout(function(){
+
+document.getElementById("finalSubmitBtn").style.display="block";
+
+},45000);
+
+};
+
+// ===============================
+// YES BUTTON
+// ===============================
+
+document.getElementById("yesBtn").onclick=function(){
+
+showPage("page2");
+
+};
+
+// ===============================
+// NO BUTTON MOVE
+// ===============================
+
+// ===============================
+// NO BUTTON MOVE (100% SAFE)
+// ===============================
+
+const noBtn = document.getElementById("noBtn");
+
+const positions = [
+
+{x:20,y:40},
+ {x:120,y:40},
+   {x:220,y:40},
+     {x:320,y:40},
+       {x:420,y:40},
+         {x:520,y:40},
+           {x:20,y:140},
+             {x:120,y:140},
+               {x:220,y:140},
+                 {x:320,y:140},
+                   {x:420,y:140},
+                     {x:520,y:140},
+                       {x:20,y:240},
+                         {x:120,y:240},
+                           {x:220,y:240},
+                             {x:320,y:240},
+                               {x:420,y:240},
+                                 {x:520,y:240},
+                                   {x:20,y:340},
+                                     {x:120,y:340},
+                                       {x:220,y:340},
+                                         {x:320,y:340},
+                                           {x:420,y:340},
+                                             {x:520,y:340},
+                                               {x:20,y:440},
+                                                 {x:120,y:440},
+                                                   {x:220,y:440},
+                                                     {x:320,y:440},
+                                                       {x:420,y:440},
+                                                         {x:520,y:440},
+                                                           {x:60,y:90},
+                                                             {x:180,y:90},
+                                                               {x:300,y:90},
+                                                                 {x:450,y:90},
+                                                                   {x:80,y:190},
+                                                                     {x:250,y:190},
+                                                                       {x:430,y:190},
+                                                                         {x:100,y:290},
+                                                                           {x:280,y:290},
+                                                                             {x:470,y:290},
+                                                                               {x:50,y:390},
+                                                                                 {x:230,y:390},
+                                                                                   {x:430,y:390},
+                                                                                     {x:100,y:520},
+                                                                                       {x:260,y:520},
+                                                                                         {x:450,y:520},
+                                                                                           {x:20,y:60},
+                                                                                             {x:110,y:60},
+                                                                                               {x:200,y:60},
+                                                                                                 {x:40,y:120},
+                                                                                                   {x:150,y:120},
+                                                                                                     {x:250,y:120},
+                                                                                                       {x:30,y:180},
+                                                                                                         {x:130,y:180},
+                                                                                                           {x:230,y:180},
+                                                                                                             {x:60,y:240},
+                                                                                                               {x:170,y:240},
+                                                                                                                 {x:270,y:240},
+                                                                                                                   {x:20,y:300},
+                                                                                                                     {x:120,y:300},
+                                                                                                                       {x:220,y:300},
+                                                                                                                         {x:50,y:360},
+                                                                                                                           {x:150,y:360},
+                                                                                                                             {x:250,y:360},
+                                                                                                                               {x:40,y:420},
+                                                                                                                                 {x:180,y:420},
+                                                                                                                                   {x:80,y:90},
+                                                                                                                                     {x:210,y:90},
+                                                                                                                                       {x:70,y:150},
+                                                                                                                                         {x:260,y:150},
+                                                                                                                                           {x:100,y:210},
+                                                                                                                                             {x:20,y:210},
+                                                                                                                                               {x:200,y:270},
+                                                                                                                                                 {x:90,y:270},
+                                                                                                                                                   {x:40,y:330},
+                                                                                                                                                     {x:260,y:330},
+                                                                                                                                                       {x:100,y:390},
+                                                                                                                                                         {x:220,y:390},
+                                                                                                                                                           {x:30,y:450},
+                                                                                                                                                             {x:180,y:450},
+                                                                                                                                                               {x:60,y:510},
+                                                                                                                                                                 {x:220,y:510},
+                                                                                                                                                                   {x:120,y:80},
+                                                                                                                                                                     {x:280,y:80},
+                                                                                                                                                                       {x:30,y:140},
+                                                                                                                                                                         {x:190,y:140},
+                                                                                                                                                                           {x:80,y:200},
+                                                                                                                                                                             {x:260,y:200},
+                                                                                                                                                                               {x:40,y:260},
+                                                                                                                                                                                 {x:170,y:260},
+                                                                                                                                                                                   {x:100,y:320},
+                                                                                                                                                                                     {x:270,y:320},
+                                                                                                                                                                                       {x:50,y:380},
+                                                                                                                                                                                         {x:200,y:380},
+                                                                                                                                                                                           {x:20,y:440},
+                                                                                                                                                                                             {x:250,y:440},
+                                                                                                                                                                                               {x:90,y:500},
+                                                                                                                                                                                                 {x:170,y:500}
+];
+
+function moveNo(){
+
+const p = positions[Math.floor(Math.random()*positions.length)];
+
+noBtn.style.position = "fixed";
+noBtn.style.left = p.x + "px";
+noBtn.style.top = p.y + "px";
+noBtn.style.margin = "0";
+noBtn.style.zIndex = "999999";
+
+}
+
+noBtn.addEventListener("mouseenter", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+
+// ===============================
+// DATE BUTTON
+// ===============================
+
+document.getElementById("dateBtn").onclick = function () {
+
+const date = document.getElementById("dateInput").value;
+const note = document.getElementById("dateNote").value;
+
+if(date == ""){
+    alert("Please Select Date ❤️");
+    return;
+}
+
+if(note.trim() == ""){
+    alert("Please Write Something ❤️");
+    return;
+}
+
+localStorage.setItem("date", date);
+localStorage.setItem("dateNote", note);
+
+showPage("page3");
+
+};
+
+// ===============================
+// TIME BUTTON
+// ===============================
+
+document.getElementById("timeBtn").onclick=function(){
+
+const time=document.getElementById("timeInput").value;
+
+if(time==""){
+
+alert("Please Select Time ❤️");
+
+return;
+
+}
+
+localStorage.setItem("time",time);
+
+showPage("page4");
+
+};
+
+// ===============================
+// PLACE BUTTON
+// ===============================
+
+document.getElementById("placeBtn").onclick=function(){
+
+const place=document.getElementById("placeInput").value;
+
+if(place.trim()==""){
+
+alert("Please Enter Place ❤️");
+
+return;
+
+}
+
+localStorage.setItem("place",place);
+
+document.getElementById("finalDate").innerHTML=localStorage.getItem("date");
+
+document.getElementById("finalTime").innerHTML=localStorage.getItem("time");
+
+document.getElementById("finalPlace").innerHTML=localStorage.getItem("place");
+
+heartBurst();
+
+setTimeout(()=>{
+
+showPage("page5");
+
+},800);
+};
+
+// ===============================
+// HEART BURST EFFECT
+// ===============================
+
+function heartBurst(){
+
+for(let i=0;i<30;i++){
+
+const h=document.createElement("div");
+
+h.innerHTML=Math.random()>0.5?"💖":"💕";
+
+h.style.position="fixed";
+h.style.left=Math.random()*100+"vw";
+h.style.top=Math.random()*100+"vh";
+h.style.fontSize=(15+Math.random()*20)+"px";
+h.style.pointerEvents="none";
+h.style.transition="all 2s ease";
+
+document.body.appendChild(h);
+
+setTimeout(()=>{
+
+h.style.transform="translateY(-150px) scale(1.5)";
+h.style.opacity="0";
+
+},50);
+
+setTimeout(()=>{
+
+h.remove();
+
+},2000);
+
+}
+
+}
+
+document.getElementById("finalSubmitBtn").onclick = function () {
+
+  // Show Thank You page immediately
+  document.body.innerHTML = `
+  <div style="
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      background:#ffd6ea;
+      font-family:Poppins,sans-serif;
+      text-align:center;
+  ">
+      <h1 style="font-size:55px;color:#ff1975;">
+      ❤️ I REALLY LOVE YOU JII.. ❤️
+      </h1>
+
+      <p style="font-size:28px;color:#8a0055;">
+      🥹💕
+      </p>
+  </div>`;
+
+  // Send data to Google Sheet in background
+  fetch("https://script.google.com/macros/s/AKfycbwKTu3tPp49sVrttnUpcVGVx_-AuayFyHE5GD82tRQXpyGmCJI4INLEEViIxxBmTbyT/exec", {
+      method: "POST",
+      headers: {
+          "Content-Type": "text/plain;charset=utf-8"
+      },
+      body: JSON.stringify({
+          date: localStorage.getItem("date"),
+          dateNote: localStorage.getItem("dateNote"),
+          time: localStorage.getItem("time"),
+          place: localStorage.getItem("place")
+      })
+  }).catch(err => console.log(err));
+
+  // Try to close after 3 seconds
+  setTimeout(() => {
+      window.open("", "_self");
+      window.close();
+      window.location.href = "about:blank";
+  }, 3000);
+
+};
+
+function checkPassword(){
+
+const pass = document.getElementById("passwordInput").value;
+
+if(pass === "Jinny"){
+
+document.getElementById("lockScreen").style.display = "none";
+
+}else{
+
+alert("Wrong Password ❤️");
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
